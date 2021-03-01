@@ -1,0 +1,13 @@
+{
+  "applicationsGit": {
+       "components": {
+                        "collections": "demo_collection"
+       },
+        "collections": {
+                          "environments": "demo_environment"
+        },
+        "environments": {
+                            "components": "demo_component"
+        }
+  }
+}
