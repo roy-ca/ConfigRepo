@@ -6,7 +6,7 @@
         "collections": {
                           "environments": "demo_environment"
         },
-        "environments": {
+        "deployables": {
                             "components": "demo_component"
         }
   }
