@@ -1,13 +1,8 @@
 {
-  "PACEFour": {
-       "components": {
-                        "collections": "demo_collection"
-       },
-        "collections": {
-                          "environments": "demo_environment"
-        },
-        "deployables": {
-                            "components": "demo_component"
+        "settings": { 
+            "ogone": "enabled", 
+            "merchantId": "replaceThis",
+            "googlePay": "disabled"
         }
-  }
 }
+
