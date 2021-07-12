@@ -1,5 +1,5 @@
 {
-    "serviceId": "pay12sa345",
+    "serviceId": "pay12sa34zx5",
     "featureToggles": {
         "paymentRefund": "enabled",
         "myPreferredPaymentMethods": "enabled",
@@ -8,8 +8,8 @@
         "payByVoucher": "enabled"
     },
     "settings": {
-        "paypal": "disabled",
-        "applePay": "disabled",
+        "paypal": "disXabled",
+        "applePay": "dixsabled",
         "ogone": "enabled", 
         "merchantId": "replaceThis",
         "paymentMethods": "1,3,5,6",
