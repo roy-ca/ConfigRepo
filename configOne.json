@@ -1,9 +1,9 @@
 {
     "serviceId": "pay12sa34zx5",
     "featureToggles": {
-        "paymentRefund": "enabled",
+        "paymentRefusdnd": "enabsdled",
         "myPreferredPaymentMethods": "enabled",
-        "invoicePrinting": "disabled",
+        "invoicePrindsing": "disabled",
         "payOnDelivery": "disabled",
         "payByVoucher": "enabled"
     },
