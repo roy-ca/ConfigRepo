@@ -1,12 +1,12 @@
 {"paymentService": {
     "database": {
-      "dbName": "paymentX_prd92_version",
+      "dbName": "paymentX_prd912_version",
       "dbUserName": "root4",
       "dbPassword": "admin1234445678",
       "dbServer": "db22.paymenrtx.be",
       "dbPort": "3399",
       "backup": {
-        "dbServer": "db23.paymentx.be"
+        "dbServer": "db2333.paymentx.be"
       }
     }
   }
