@@ -1,6 +1,6 @@
 {"paymentService": {
     "database": {
-      "dbName": "paymentX_prd9",
+      "dbName": "paymentX_prd92_version",
       "dbUserName": "root3",
       "dbPassword": "admin12345678",
       "dbServer": "db22.paymentx.be",
