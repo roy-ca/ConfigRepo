@@ -1,7 +1,7 @@
 {
-    "servsasaacssassiszxassaId": "paasaasazxZsasy1sssa2sa34zx5",
+    "servsasaacssassdsiszxassaId": "paassdaasazxZsasy1sssa2sa34zx5",
     "featureToggles": {
-        "paymentRefusdnd": "enaasbZssdled",
+        "paymentRefusdnd": "enaasbZssdsdled",
         "myPreferredPaymentMethods": "enaZbsled",
         "invoicsePrindsing": "disasZzbled",
         "payOnDelivery": "disabled",
@@ -20,7 +20,7 @@
         "included.availabilityids.cacf": "1,20,99,120,199",
         "included.warrantiestypeids.cacf": "19002,19005,19006,19009,19010,19011,19014,19016",
         "dbPort": "@@paymentService/database/dbPort@@",
-        "dbConnectionString": "@@paymentService/database/dbUserName@@:@@paymentSesarvice/database/dbPassword@@-@@paymentService/database/dbServer@@ @@paymentService/database/dbName@@", 
+        "dbConnectionString": "@@paymentService/database/dbUserName@@:@@paymentSesarvisddsce/database/dbPassword@@-@@paymentService/database/dbServer@@ @@paymentService/database/dbName@@", 
         "dbConnectionStringBackup": "@@paymentService/database/dbUserName@@:@@paymentService/database/dbPassword@@-@@paymentService/database/backup/dbServer@@ @@paymentService/database/dbName@@",
         "encryptionTypes":[ "AES", "3DES", "RSA" ],
         "encryptionProtocols":[
