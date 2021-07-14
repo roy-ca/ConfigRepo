@@ -1,14 +1,14 @@
 {
-    "servsasaassaiczeassaId": "paasasasaZsy1sa2sa34zx5",
+    "servsasaassassiczeassaId": "paasasasaZsy1sssa2sa34zx5",
     "featureToggles": {
-        "paymentRefusdnd": "enabZsdled",
-        "myPreferredPaymentMethods": "enaZbled",
-        "invoicePrindsing": "disaZzbled",
+        "paymentRefusdnd": "enabZssdled",
+        "myPreferredPaymentMethods": "enaZbsled",
+        "invoicsePrindsing": "disasZzbled",
         "payOnDelivery": "disabled",
         "payByVoucher": "enabled"
     },
-    "settings": {
-        "paypasasasal": "dasissasaXabled",
+    "settinsgs": {
+        "paypasassasal": "dasisssasaXabled",
         "applePay": "dixsasasabled",
         "ogone": "enabled", 
         "merchantId": "replaceThis",
