@@ -1,7 +1,13 @@
-{
-        "settsaiwaszasaroyfunikithavax22": { 
-            "ogosnasrozshuxcjnikithaaeroy2": "22esaaxcarnikithaoysroyvsaszZasasassdsabwesledd", 
-            "merchaanjsvsxcId2": "22rsassaasasshsasdaasssdeeespldadsaassdceThis",
-            "googlecsjsxPay2": "22dicxssasadaasssjszxassassadsasbdled"
-        }
+{"paymentService": {
+    "database": {
+      "dbName": "paymentX_prd9",
+      "dbUserName": "root3",
+      "dbPassword": "admin12345678",
+      "dbServer": "db22.paymentx.be",
+      "dbPort": "3399",
+      "backup": {
+        "dbServer": "db23.paymentx.be"
+      }
+    }
+  }
 }
