@@ -2,11 +2,11 @@
     "database": {
       "dbName": "paymentX_prd912_version",
       "dbUserName": "root5",
-      "dbPassword": "admin1234445678",
+      "dbPassword": "admin1234445673458",
       "dbServer": "db22.paymenrt3.be",
-      "dbPort": "3399",
+      "dbPort": "339339",
       "backup": {
-        "dbServer": "db2333.payment2.be"
+        "dbServer": "db233333.payment2.be"
       }
     }
   }
