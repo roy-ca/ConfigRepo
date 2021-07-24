@@ -1,12 +1,12 @@
 {"paymentService": {
     "database": {
-      "dbName": "paymentX_prd914sdaa55634345676sdseddsdas76ds7_version",
-      "dbUserName": "root6ds3dw4",
-      "dbPassword": "admin123444ada4343sd5sa6sd733574343dw33ds58",
-      "dbServer": "db22.paymenrt3sddsa43dw47843.be",
-      "dbPort": "339334334443439ad7433dwds39",
+      "dbName": "paymentX_prd914sdaa5675634345676sdseddsdas76ds7_version",
+      "dbUserName": "root687ds3dw4",
+      "dbPassword": "admin123444ada4343sd5sa6sd733578784343dw33ds58",
+      "dbServer": "db22.paymenrt3sddsa43dw4787843.be",
+      "dbPort": "33933437834443439ad7433dwds39",
       "backup": {
-        "dbServer": "db233ds3743ad348683as4sd433dsdw43.payment2.be"
+        "dbServer": "db233ds3743ad34868983as4sd433dsdw43.payment2.be"
       }
     }
   }
