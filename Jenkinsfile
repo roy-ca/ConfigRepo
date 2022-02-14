@@ -12,7 +12,7 @@ pipeline{
     }}
     post {
         always {
-            junit skipPublishingChecks: false,testResults:'*.xml'
+            junit testResults:'*.xml'
         }
     }
 }
