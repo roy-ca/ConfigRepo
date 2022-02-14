@@ -12,7 +12,7 @@ pipeline{
     }}
     post {
         always {
-            junit testResults:'*.xml'
+            junit checksName: "test",testResults:'*.xml'
         }
     }
 }
