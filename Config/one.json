@@ -1,5 +1,6 @@
 {
   "one":"two",
   "two":"three",
-  "sampleKey":"sampleValue"
+  "sampleKey":"sampleValue",
+  "basicKey": "basicValue"
 }
