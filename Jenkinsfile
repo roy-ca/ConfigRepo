@@ -2,19 +2,20 @@ def getResult =''
 pipeline{
     agent any
     stages {
+        stage('getDetails'){
+            steps{
+                script{
+                getResult = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"PRD",target:"deployable",configFile:"",dataFormat:"json",namePath:"trial",autoCommit:true,autoValidate:true)
+                echo "!!!!!!! getResult:: ${getResult}" 
+                }
+            }
+    }
         stage('register'){
             steps{
                 snDevOpsConfigRegisterPipeline(applicationName:"testApp",snapshotName:"da")
             }
         }
-        stage('getDetails'){
-            steps{
-                script{
-                getResult = snDevOpsConfigGetSnapshots(applicationName:"testApp",deployableName: "TST-1",changesetNumber: null,outputFormat:"xml",isValidated:false)
-                echo "!!!!!!! getResult:: ${getResult}" 
-                }
-            }
-    }}
+        }
     post {
         always {
             junit checksName: "test",testResults:'*.xml'
