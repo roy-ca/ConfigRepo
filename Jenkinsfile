@@ -12,14 +12,9 @@ pipeline{
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"testApp",changesetNumber:"Chset-8")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-8")
             }
         }
         }
-    post {
-        always {
-            junit checksName: "test",testResults:'*.xml'
-        }
-    }
 }
         
