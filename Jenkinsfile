@@ -12,7 +12,7 @@ pipeline{
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"testApp",snapshotName:"da")
+                snDevOpsConfigRegisterPipeline(applicationName:"testApp",changesetNumber:"Chset-8")
             }
         }
         }
