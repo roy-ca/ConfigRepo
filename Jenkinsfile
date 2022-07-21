@@ -5,14 +5,14 @@ pipeline{
         stage('getDetails'){
             steps{
                 script{
-                getResult = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"TST-1",target:"deployable",configFile:"configOne.json",dataFormat:"json",namePath:"trial",autoCommit:true,autoValidate:true)
+                getResult = snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"TST-1")
                 echo "!!!!!!! getResult:: ${getResult}" 
                 }
             }
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"${getResult}")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-3")
             }
         }
         }
