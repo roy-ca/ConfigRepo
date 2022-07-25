@@ -12,7 +12,7 @@ pipeline{
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",snapshotName:"TST-1-v1.dpl")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-6")
             }
         }
         }
