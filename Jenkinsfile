@@ -12,7 +12,7 @@ pipeline{
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-7")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-4")
             }
         }
         }
