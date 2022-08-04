@@ -12,7 +12,7 @@ pipeline{
         stage('getDetails'){
             steps{
                 script{
-                getResult = snDevOpsConfigGetSnapshots(applicationName:"DevOpsChangeFour",deployableName:null,changesetNumber:"${changeset}")
+                getResult = snDevOpsConfigGetSnapshots(applicationName:"DevOpsChangeFour",deployableName:"PRD",changesetNumber:null)
                 echo "!!!!!!! getResult:: ${getResult}" 
                 }
             }
