@@ -1,18 +1,27 @@
+def changeset = ''
 def getResult =''
 pipeline{
     agent any
     stages {
+        stage('upload') {
+            steps{
+                script{
+                  changeset = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"TST-1",target:"deployable",namePath:"getSnapshot",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
+                    echo "Changeset NUmber ::  ${changeset}"
+                }       }    }
         stage('getDetails'){
             steps{
                 script{
-                getResult = snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"TST-1")
+                getResult = snDevOpsConfigGetSnapshots(applicationName:"DevOpsChangeFour",deployableName:"TST-1",changesetNumber:null)
                 echo "!!!!!!! getResult:: ${getResult}" 
                 }
             }
     }
         stage('register'){
             steps{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-4")
+                script{
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"${changeset}")
+                }
             }
         }
         }
