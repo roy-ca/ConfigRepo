@@ -3,16 +3,20 @@ def getResult =''
 pipeline{
     agent any
     stages {
-        stage('upload') {
+        stage('validate') {
             steps{
                 script{
-                  changeset = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"PRD",target:"deployable",namePath:"getSnapshot",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
-                    echo "Changeset NUmber ::  ${changeset}"
+                  snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"TST-1",snapshotName:"TST-1-v1.dpl")
                 }       }    }
+        stage('publish') {
+            steps {
+                snDevOpsConfigPublish(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v1.dpl")
+            }
+        }
         stage('register'){
             steps{
                 script{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"${changeset}")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"Chset-3")
                 }
             }
         }
