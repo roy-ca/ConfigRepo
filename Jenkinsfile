@@ -8,15 +8,7 @@ pipeline{
                 script{
                   changeset = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"PRD",target:"deployable",namePath:"getSnapshot",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
                     echo "Changeset NUmber ::  ${changeset}"
-                }       }    }
-        stage('getDetails'){
-            steps{
-                script{
-                getResult = snDevOpsConfigGetSnapshots(applicationName:"DevOpsChangeFour",deployableName:"PRD",changesetNumber:null)
-                echo "!!!!!!! getResult:: ${getResult}" 
-                }
-            }
-    }
+                }       }    
         stage('register'){
             steps{
                 script{
