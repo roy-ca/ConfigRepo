@@ -6,13 +6,13 @@ pipeline{
         stage('validate') {
             steps{
                 script{
-                  snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v3.dpl")
-                    sleep 1
+                  snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v4.dpl")
+                    sleep 2
                 }       }    }
         stage('publish') {
             steps {
-                snDevOpsConfigPublish(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v2.dpl")
-                sleep 1
+                snDevOpsConfigPublish(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v3.dpl")
+                sleep 2
             }
         }
         stage('register'){
