@@ -11,14 +11,14 @@ pipeline{
                 }       }    }
         stage('publish') {
             steps {
-                snDevOpsConfigValidate(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"PRD-v1.dpl")
+                snDevOpsConfigPublish(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"")
                 sleep 3
             }
         }
         stage('register'){
             steps{
                 script{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",snapshotName:"PRD-v1.dpl")
+                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",snapshotName:"PRD-v2.dpl")
                 }
             }
         }
