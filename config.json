@@ -2,7 +2,8 @@
         "settings": { 
             "ogone": "enabled", 
             "merchantId": "replaceThis",
-            "googlePay": "disabled"
+            "googlePay": "disabled",
+            "secondRun": "started"
         }
 }
 
