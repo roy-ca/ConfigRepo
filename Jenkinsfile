@@ -6,7 +6,7 @@ pipeline{
         stage('upload') {
             steps{
                 script{
-                  changeset = snDevOpsConfigUpload(applicationName:"Demo-Application",deployableName:"Prod-Hyd",target:"deployable",namePath:"test_branch",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
+                  changeset = snDevOpsConfigUpload(applicationName:"Demo-Application",deployableName:"Prod-Hyd",target:"deployable",namePath:"test_branch",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"config.json")
                     echo "Changeset NUmber ::  ${changeset}"
                 }       }    }
         stage('validate'){
