@@ -10,11 +10,11 @@ pipeline{
                       applicationName: "Demo-Application",
                       deployableName: "Prod-Hyd",
                       target: "deployable",
-                      namePath: "main_branch",
+                      namePath: "test_branch",
                       dataFormat: "json",
                       autoCommit: true,
                       autoValidate: false,
-                      configFile: "configOne.json"
+                      configFile: "config.json"
                   )
                   echo "Changeset Number ::  ${changeset}"
                 }       
