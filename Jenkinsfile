@@ -3,12 +3,8 @@ def getResult =''
 pipeline{
     agent any
     stages {
-        stage('Upload - Main Branch') {
-            when {
-                branch "main"
-            }
+        stage('Upload') {
             steps {
-                git branch: 'main', url: 'https://github.com/roy-ca/ConfigRepo.git'
                 script{
                   changeset = snDevOpsConfigUpload(
                       applicationName: "Demo-Application",
@@ -19,27 +15,6 @@ pipeline{
                       autoCommit: true,
                       autoValidate: false,
                       configFile: "configOne.json"
-                  )
-                  echo "Changeset Number ::  ${changeset}"
-                }       
-            }    
-        }
-        stage('Upload - Test Branch') {
-            when {
-                branch "test"
-            }
-            steps {
-                git branch: 'test', url: 'https://github.com/roy-ca/ConfigRepo.git'
-                script{
-                  changeset = snDevOpsConfigUpload(
-                      applicationName:"Demo-Application",
-                      deployableName:"Prod-Hyd",
-                      target:"deployable",
-                      namePath:"test_branch",
-                      dataFormat:"json",
-                      autoCommit: true,
-                      autoValidate: false,
-                      configFile:"config.json"
                   )
                   echo "Changeset Number ::  ${changeset}"
                 }       
@@ -68,3 +43,4 @@ pipeline{
         }
     }
 }
+        
