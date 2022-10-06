@@ -6,13 +6,13 @@ pipeline{
         stage('upload') {
             steps{
                 script{
-                  changeset = snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"TST-1",target:"deployable",namePath:"getSnapshot",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
+                  changeset = snDevOpsConfigUpload(applicationName:"Demo-Application",deployableName:"Prod-Hyd",target:"deployable",namePath:"test_branch",dataFormat:"json",autoCommit:true,autoValidate:true,configFile:"configOne.json")
                     echo "Changeset NUmber ::  ${changeset}"
                 }       }    }
-        stage('getDetails'){
+        stage('validate'){
             steps{
                 script{
-                getResult = snDevOpsConfigGetSnapshots(applicationName:"DevOpsChangeFour",deployableName:"TST-1",changesetNumber:null)
+                getResult = snDevOpsConfigValidate(applicationName:"Demo-Application",deployableName:"Prod-Hyd")
                 echo "!!!!!!! getResult:: ${getResult}" 
                 }
             }
@@ -20,7 +20,7 @@ pipeline{
         stage('register'){
             steps{
                 script{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",changesetNumber:"${changeset}")
+                snDevOpsConfigRegisterPipeline(applicationName:"Demo-Application",changesetNumber:"${changeset}")
                 }
             }
         }
