@@ -3,24 +3,68 @@ def getResult =''
 pipeline{
     agent any
     stages {
-        stage('upload') {
-            steps{
-                script{
-                 changeset=snDevOpsConfigUpload(applicationName:"Demo-Application",deployableName:"Prod-Hyd",target:"deployable",dataFormat:"json",configFile:"configOne.json",namePath:"main_branch",autoCommit:true,autoValidate:false)
-                    sleep 3
-                }       }    }
-        stage('publish') {
-            steps {
-                snDevOpsConfigValidate(applicationName:"Demo-Application",deployableName:"Prod-Hyd")
-                sleep 3
+        stage('Upload - Main Branch') {
+            when {
+                branch "main"
             }
+            steps {
+                git branch: 'main', url: 'https://github.com/roy-ca/ConfigRepo.git'
+                script{
+                  changeset = snDevOpsConfigUpload(
+                      applicationName: "Demo-Application",
+                      deployableName: "Prod-Hyd",
+                      target: "deployable",
+                      namePath: "main_branch",
+                      dataFormat: "json",
+                      autoCommit: true,
+                      autoValidate: false,
+                      configFile: "configOne.json"
+                  )
+                  echo "Changeset Number ::  ${changeset}"
+                }       
+            }    
         }
-        stage('register'){
+        stage('Upload - Test Branch') {
+            when {
+                branch "test"
+            }
+            steps {
+                git branch: 'test', url: 'https://github.com/roy-ca/ConfigRepo.git'
+                script{
+                  changeset = snDevOpsConfigUpload(
+                      applicationName:"Demo-Application",
+                      deployableName:"Prod-Hyd",
+                      target:"deployable",
+                      namePath:"test_branch",
+                      dataFormat:"json",
+                      autoCommit: true,
+                      autoValidate: false,
+                      configFile:"config.json"
+                  )
+                  echo "Changeset Number ::  ${changeset}"
+                }       
+            }    
+        }
+        stage('Validate') {
             steps{
                 script{
-                snDevOpsConfigRegisterPipeline(applicationName:"Demo-Application",changesetNumber:"${changeset}")
+                    getResult = snDevOpsConfigValidate(
+                        applicationName: "Demo-Application",
+                        deployableName: "Prod-Hyd"
+                    )
+                    echo "!!!!!!! getResult:: ${getResult}" 
                 }
             }
         }
+        stage('Register'){
+            steps{
+                script{
+                    snDevOpsConfigRegisterPipeline(
+                        applicationName:"Demo-Application",
+                        changesetNumber:"${changeset}"
+                    )
+                }
+            }
         }
+    }
 }
