@@ -1,5 +1,5 @@
 {
-  "check": "false",
+  "check": "true",
   "instance": "ngsandiego2",
   "trialRun2": "validating",
   "version1": "1.36-main"
