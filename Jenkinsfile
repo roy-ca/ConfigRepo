@@ -13,23 +13,12 @@ pipeline{
                       namePath: "test_branch",
                       dataFormat: "json",
                       autoCommit: true,
-                      autoValidate: false,
+                      autoValidate: true,
                       configFile: "config.json"
                   )
                   echo "Changeset Number ::  ${changeset}"
                 }       
             }    
-        }
-        stage('Validate') {
-            steps{
-                script{
-                    getResult = snDevOpsConfigValidate(
-                        applicationName: "Demo-Application",
-                        deployableName: "Prod-Hyd"
-                    )
-                    echo "!!!!!!! getResult:: ${getResult}" 
-                }
-            }
         }
         stage('Register'){
             steps{
