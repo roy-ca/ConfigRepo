@@ -3,22 +3,22 @@ def getResult =''
 pipeline{
     agent any
     stages {
-        stage('validate') {
+        stage('upload') {
             steps{
                 script{
-                  snDevOpsConfigUpload(applicationName:"DevOpsChangeFour",deployableName:"PRD",target:"deployable",dataFormat:"json",configFile:"configOne.json",namePath:"spike",autoCommit:true,autoValidate:false)
+                 changeset=snDevOpsConfigUpload(applicationName:"Demo-Application",deployableName:"Prod-Hyd",target:"deployable",dataFormat:"json",configFile:"configOne.json",namePath:"main_branch",autoCommit:true,autoValidate:false)
                     sleep 3
                 }       }    }
         stage('publish') {
             steps {
-                snDevOpsConfigPublish(applicationName:"DevOpsChangeFour",deployableName:"PRD",snapshotName:"")
+                snDevOpsConfigValidate(applicationName:"Demo-Application",deployableName:"Prod-Hyd")
                 sleep 3
             }
         }
         stage('register'){
             steps{
                 script{
-                snDevOpsConfigRegisterPipeline(applicationName:"DevOpsChangeFour",snapshotName:"PRD-v2.dpl")
+                snDevOpsConfigRegisterPipeline(applicationName:"Demo-Application",changesetNumber:"${changeset}")
                 }
             }
         }
