@@ -1,6 +1,6 @@
 {
         "settings": { 
-            "ogone": "enabled", 
+            "ogone": "disabled", 
             "merchantId": "replaceThis",
             "googlePay": "disabled"
         }
