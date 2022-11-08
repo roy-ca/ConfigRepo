@@ -7,10 +7,10 @@ pipeline{
             steps {
                 script{
                   changeset = snDevOpsConfigUpload(
-                      applicationName: "Demo-Application",
-                      deployableName: "Prod-Hyd",
-                      target: "deployable",
-                      namePath: "main_branch",
+                      applicationName: "RoyTestApp",
+                      collectionName: "testCollection",
+                      target: "collection",
+                      namePath: "main",
                       dataFormat: "json",
                       autoCommit: true,
                       autoValidate: true,
@@ -19,16 +19,6 @@ pipeline{
                   echo "Changeset Number ::  ${changeset}"
                 }       
             }    
-        }
-        stage('Register'){
-            steps{
-                script{
-                    snDevOpsConfigRegisterPipeline(
-                        applicationName:"Demo-Application",
-                        changesetNumber:"${changeset}"
-                    )
-                }
-            }
         }
     }
 }
