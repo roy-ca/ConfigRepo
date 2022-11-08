@@ -1,6 +1,3 @@
 {
-  "check": "true",
-  "instance": "roydemo",
-  "trialRun": "validating",
-  "version": "1.37"
+ "uploadComponent": "true"
 }
