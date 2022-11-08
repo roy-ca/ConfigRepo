@@ -8,8 +8,8 @@ pipeline{
                 script{
                   changeset = snDevOpsConfigUpload(
                       applicationName: "RoyTestApp",
-                      collectionName: "testComponent",
-                      target: "component",
+                      deployableName: "Production",
+                      target: "deployable",
                       namePath: "main",
                       dataFormat: "json",
                       autoCommit: true,
