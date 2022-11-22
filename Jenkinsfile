@@ -3,22 +3,15 @@ def getResult =''
 pipeline{
     agent any
     stages {
-        stage('Upload') {
-            steps {
+        stage('Register'){
+            steps{
                 script{
-                  changeset = snDevOpsConfigUpload(
-                      applicationName: "RoyTestApp",
-                      deployableName: "Production",
-                      target: "deployable",
-                      namePath: "main",
-                      dataFormat: "json",
-                      autoCommit: true,
-                      autoValidate: true,
-                      configFile: "configOne.json"
-                  )
-                  echo "Changeset Number ::  ${changeset}"
-                }       
-            }    
+                    snDevOpsConfigRegisterPipeline(
+                        applicationName:"Demo-Application",
+                        changesetNumber:"${changeset}"
+                    )
+                }
+            }
         }
     }
 }
