@@ -13,7 +13,8 @@ pipeline{
                         namePath:"main_demo",
                         target:"deployable",
                         autoCommit:true,
-                        autoValidate:true
+                        autoValidate:true,
+                        dataFormat:"json"
                       )
                 }
             }
