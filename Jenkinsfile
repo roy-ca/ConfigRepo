@@ -3,11 +3,26 @@ def getResult =''
 pipeline{
     agent any
     stages {
+        stage('Upload'){
+            steps{
+                script{
+                    changeset=snDevOpsConfigUpload(
+                        applicationName:"DevOpsChangeFour",
+                        deployableName:"TST-2",
+                        configFile:"configThree.json",
+                        namePath:"test_demo",
+                        target:"deployable",
+                        autoCommit:true,
+                        autoValidate:true
+                      )
+                }
+            }
+        }           
         stage('Register'){
             steps{
                 script{
                     snDevOpsConfigRegisterPipeline(
-                        applicationName:"Demo-Application",
+                        applicationName:"DevOpsChangeFour",
                         changesetNumber:"${changeset}"
                     )
                 }
