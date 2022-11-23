@@ -12,6 +12,7 @@
         "almostScaring":"true",
         "complete":"false",
         "trying":"true",
-        "truone":"test"
+        "truone":"test",
+        "lastCall":"okay"
 }
 
