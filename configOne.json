@@ -8,5 +8,6 @@
  "sample":"true",
  "checkDOne":"false",
  "multiCheck":"true",
- "demo":"true"
+ "demo":"true",
+ "check":"true"
 }
