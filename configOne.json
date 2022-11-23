@@ -9,5 +9,6 @@
  "checkDOne":"false",
  "multiCheck":"true",
  "demo":"true",
- "check":"true"
+ "check":"true",
+ "multiNoFolder":"true"
 }
