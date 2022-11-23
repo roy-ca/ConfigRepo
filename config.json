@@ -16,6 +16,7 @@
         "lastCall":"okay",
         "check":"local",
         "role":"maybe",
-        "canI":"yes"
+        "canI":"yes",
+        "multiNoFolder":"true"
 }
 
