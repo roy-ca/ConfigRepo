@@ -7,5 +7,6 @@
  "normalPipeinFolder":"true",
  "sample":"true",
  "checkDOne":"false",
- "multiCheck":"true"
+ "multiCheck":"true",
+ "demo":"true"
 }
