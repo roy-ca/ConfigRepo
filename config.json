@@ -13,6 +13,7 @@
         "complete":"false",
         "trying":"true",
         "truone":"test",
-        "lastCall":"okay"
+        "lastCall":"okay",
+        "check":"local"
 }
 
