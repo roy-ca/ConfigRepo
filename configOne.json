@@ -1,5 +1,6 @@
 {
  "uploadMainTest":"checkingTrue",
  "checkMain":"fine",
- "validating":"true"
+ "validating":"true",
+ "normalOne":"true"
 }
