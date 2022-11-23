@@ -10,5 +10,6 @@
  "multiCheck":"true",
  "demo":"true",
  "check":"true",
- "multiNoFolder":"true"
+ "multiNoFolder":"true",
+ "MultiSingle":"true"
 }
