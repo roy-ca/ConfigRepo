@@ -6,5 +6,6 @@
  "towLeelFolder":"true",
  "normalPipeinFolder":"true",
  "sample":"true",
- "checkDOne":"false"
+ "checkDOne":"false",
+ "multiCheck":"true"
 }
