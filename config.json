@@ -17,6 +17,7 @@
         "check":"local",
         "role":"maybe",
         "canI":"yes",
-        "multiNoFolder":"true"
+        "multiNoFolder":"true",
+        "multimulti":"true"
 }
 
