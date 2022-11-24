@@ -9,7 +9,7 @@ pipeline{
                     changeset=snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
                         deployableName:"PRD",
-                        configFile:"configOne.json",
+                        configFile:"configOOOwo.json",
                         namePath:"main_demo",
                         target:"deployable",
                         autoCommit:true,
