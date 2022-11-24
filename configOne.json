@@ -14,5 +14,6 @@
  "MultiSingle":"true",
  "Multimulti":"false12",
  "multiMain": "true",
- "finalRun":"true"
+ "finalRun":"true",
+ "singleDemo":"true"
 }
