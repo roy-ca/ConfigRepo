@@ -8,9 +8,9 @@ pipeline{
                 script{
                     changeset=snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        deployableName:"TST-1",
-                        configFile:"config.json",
-                        namePath:"multiSlash_demo",
+                        deployableName:"TST-2",
+                        configFile:"configFour.json",
+                        namePath:"multiSlash_demo_one",
                         target:"deployable",
                         autoCommit:true,
                         autoValidate:true,
