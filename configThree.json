@@ -7,5 +7,6 @@
   "fineCheck":"true",
   "satisfaction":"true",
   "multiNoFolder":"true",
-  "multiMulti":"true1"
+  "multiMulti":"true1",
+  "mainMulti":"false"
 }
