@@ -16,5 +16,6 @@
  "multiMain": "true",
  "finalRun":"true",
  "singleDemo":"true",
- "SinglePipeinFolder":"true"
+ "SinglePipeinFolder":"true",
+ "MultiBranch":"true"
 }
