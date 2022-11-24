@@ -19,5 +19,6 @@
  "SinglePipeinFolder":"true",
  "MultiBranch":"true",
  "MultiFolderMultiMain":"true",
- "newCodeChange":"true"
+ "newCodeChange":"true",
+ "newCHange":"true"
 }
