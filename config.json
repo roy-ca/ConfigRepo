@@ -20,6 +20,7 @@
         "multiNoFolder":"true",
         "multimulti":"true1",
         "mini":"test",
-        "finalTest":"true"
+        "finalTest":"true",
+        "multiMain":"true"
 }
 
