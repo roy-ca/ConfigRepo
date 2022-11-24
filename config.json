@@ -21,6 +21,7 @@
         "multimulti":"true1",
         "mini":"test",
         "finalTest":"true",
-        "multiMain":"true"
+        "multiMain":"true",
+        "MultiFolderMultiMain":"true"
 }
 
