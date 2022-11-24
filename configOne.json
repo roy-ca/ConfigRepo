@@ -12,5 +12,5 @@
  "check":"true",
  "multiNoFolder":"true",
  "MultiSingle":"true",
- "Multimulti":"true"
+ "Multimulti":"false"
 }
