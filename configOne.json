@@ -13,5 +13,6 @@
  "multiNoFolder":"true",
  "MultiSingle":"true",
  "Multimulti":"false12",
- "multiMain": "true"
+ "multiMain": "true",
+ "finalRun":"true"
 }
