@@ -15,5 +15,6 @@
  "Multimulti":"false12",
  "multiMain": "true",
  "finalRun":"true",
- "singleDemo":"true"
+ "singleDemo":"true",
+ "SinglePipeinFolder":"true"
 }
