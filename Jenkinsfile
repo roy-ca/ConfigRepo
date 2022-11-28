@@ -18,7 +18,7 @@ pipeline{
                       )
                      snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        changesetNumber:"${changeset}"
+                        changesetNumber:"${changeset}",
                         deployableName:"TST-1",
                         configFile:"config.json",
                         namePath:"main_demo",
