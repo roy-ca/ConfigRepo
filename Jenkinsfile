@@ -8,13 +8,24 @@ pipeline{
                 script{
                     changeset=snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        deployableName:"PRD",
+                        collectionName:"release-1.5",
                         configFile:"configOne.json",
-                        namePath:"main_demo",
+                        namePath:"collection_demo",
+                        target:"collection",
+                        autoCommit:false,
+                        autoValidate:true,
+                        dataFormat:"json"
+                      )
+                    snDevOpsConfigUpload(
+                        applicationName:"DevOpsChangeFour",
+                        deployableName:"PRD",
+                        configFile:"config.json",
+                        namePath:"vars/vars_demo",
                         target:"deployable",
                         autoCommit:true,
                         autoValidate:true,
-                        dataFormat:"json"
+                        dataFormat:"json",
+                        changesetNumber:"${changeset}"
                       )
                 }
             }
