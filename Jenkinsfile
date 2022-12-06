@@ -8,7 +8,7 @@ pipeline{
                 script{
                     changeset=snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        deployableName:"PRD",
+                        deployableName:"TST-2",
                         configFile:"configOOOwo.json",
                         namePath:"main_demo",
                         target:"deployable",
