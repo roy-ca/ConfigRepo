@@ -1,8 +1,4 @@
 {
-        "settings": { 
-            "ogone": "disabled", 
-            "merchantId": "replaceThis",
-            "googlePay": "disabledds23"
-        }
+  "demoVars":"active"
 }
 
