@@ -18,10 +18,10 @@ pipeline{
                       )
                     snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        deployableName:"PRD",
+                        collectionName:"release-1.0",
                         configFile:"config.json",
-                        namePath:"vars/vars_demo",
-                        target:"deployable",
+                        namePath:"collection_sub",
+                        target:"collection",
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
