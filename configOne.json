@@ -1,5 +1,6 @@
 {
  "demoActive":"true",
  "mainDemoCollection":"valid",
- "finalDemo":"active"
+ "finalDemo":"active",
+ "finalDemoActive":"run"
 }
