@@ -10,7 +10,7 @@ pipeline{
                         applicationName:"DevOpsChangeFour",
                         collectionName:"release-1.5",
                         configFile:"configOne.json",
-                        namePath:"collection_demo",
+                        namePath:"vars/collection_demo",
                         target:"collection",
                         autoCommit:false,
                         autoValidate:true,
@@ -18,10 +18,10 @@ pipeline{
                       )
                     snDevOpsConfigUpload(
                         applicationName:"DevOpsChangeFour",
-                        collectionName:"release-1.0",
+                        deployableName:"PRD",
                         configFile:"config.json",
-                        namePath:"collection_sub",
-                        target:"collection",
+                        namePath:"vars/prod_sub",
+                        target:"deployable",
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
