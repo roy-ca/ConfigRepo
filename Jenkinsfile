@@ -23,7 +23,7 @@ pipeline{
             steps{
                 script{
                     snDevOpsConfigRegisterPipeline(
-                        applicationName:"DevOpsChangeFour",
+                        applicationName:"MultfolderDemoApp",
                         changesetNumber:"${changeset}"
                     )
                 }
