@@ -7,8 +7,8 @@ pipeline{
             steps{
                 script{
                     changeset=snDevOpsConfigUpload(
-                        applicationName:"DevOpsChangeFour",
-                        deployableName:"PRD",
+                        applicationName:"MultfolderDemoApp",
+                        deployableName:"Development",
                         configFile:"configOne.json",
                         namePath:"main_demo",
                         target:"deployable",
