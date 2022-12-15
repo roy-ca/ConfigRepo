@@ -7,8 +7,8 @@ pipeline{
             steps{
                 script{
                     changeset=snDevOpsConfigUpload(
-                        applicationName:"DevOpsChangeFour",
-                        deployableName:"TST-1",
+                        applicationName:"MultfolderDemoApp",
+                        deployableName:"Test",
                         configFile:"config.json",
                         namePath:"multiSlash_demo",
                         target:"deployable",
