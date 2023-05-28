@@ -8,7 +8,7 @@ pipeline{
                 script{
                     changeset=snDevOpsConfigUpload(
                         applicationName:"AdoPublish Test",
-                        deployableName:"Test"
+                        deployableName:"Test",
                         configFile:"configOne.json",
                         namePath:"TestCompOne/testRun",
                         target:"deployable",
