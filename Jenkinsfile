@@ -22,7 +22,7 @@ pipeline{
         stage('Get Snapshot'){
             steps {
                 script {
-                    getResult =  snDevOpsConfigGetSnapshots(applicationName:"AdoPublish Test",changesetNumber:"${changeset}")
+                    getResult =  snDevOpsConfigGetSnapshots(applicationName:"AdoPublish Test",deployableName:"Test")
                 }
                 echo getResult
             }
