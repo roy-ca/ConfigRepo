@@ -7,11 +7,10 @@ pipeline{
             steps{
                 script{
                     changeset=snDevOpsConfigUpload(
-                        applicationName:"MultfolderDemoApp",
-                        deployableName:"Development",
+                        applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
-                        namePath:"main_demo",
-                        target:"deployable",
+                        namePath:"main_component",
+                        target:"component",
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json"
@@ -19,14 +18,12 @@ pipeline{
                 }
             }
         }           
-        stage('Register'){
-            steps{
-                script{
-                    snDevOpsConfigRegisterPipeline(
-                        applicationName:"MultfolderDemoApp",
-                        changesetNumber:"${changeset}"
-                    )
+        stage('Get Snapshot'){
+            steps {
+                script {
+                    getResult =  snDevOpsConfigGetSnapshots(applicationName:"AdoPublish Test",changesetNumber:"${changeset}")
                 }
+                echo getResult
             }
         }
     }
