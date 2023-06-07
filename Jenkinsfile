@@ -10,7 +10,7 @@ pipeline{
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new",
                         target:"component",
-                        autoCommit:true,
+                        autoCommit:false,
                         autoValidate:true,
                         dataFormat:"json",
                         exporterName:"returnAllData-now",
