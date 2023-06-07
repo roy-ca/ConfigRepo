@@ -20,14 +20,14 @@ pipeline{
                       )
                 }
             }
-            stage('Register') {
-                steps{
-                    script {
-                        snDevOpsConfigRegisterPipeline(changesetNumber:"${changeset}",applicationName:"AdoPublish Test")
-                    }
-                }
-            }
-        }           
+        }
+        stage('Register') {
+             steps{
+                 script {
+                      snDevOpsConfigRegisterPipeline(changesetNumber:"${changeset}",applicationName:"AdoPublish Test")
+                 }
+             }
+        }          
     }
 }
         
