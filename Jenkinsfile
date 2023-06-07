@@ -1,5 +1,4 @@
 def changeset = ''
-def getResult =''
 pipeline{
     agent any
     stages {
@@ -19,14 +18,6 @@ pipeline{
                 }
             }
         }           
-        stage('Get Snapshot'){
-            steps {
-                script {
-                    getResult =  snDevOpsConfigGetSnapshots(applicationName:"AdoPublish Test",deployableName:"Test")
-                }
-                echo getResult
-            }
-        }
     }
 }
         
