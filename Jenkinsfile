@@ -8,9 +8,10 @@ pipeline{
                     changeset=snDevOpsConfigPipeline(
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
-                        namePath:"TestCompOne/new",
-                        target:"component",
-                        autoCommit:false,
+                        namePath:"TestCollOne/new/key",
+                        collectionName:"TestCollTwo"
+                        target:"collection",
+                        autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
                         exporterName:"returnAllData-now",
