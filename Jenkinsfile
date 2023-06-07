@@ -8,7 +8,7 @@ pipeline{
                     changeset=snDevOpsConfigPipeline(
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
-                        namePath:"TestCompOne/testRun",
+                        namePath:"main_component",
                         target:"component",
                         autoCommit:true,
                         autoValidate:true,
