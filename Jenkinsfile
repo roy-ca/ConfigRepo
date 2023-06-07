@@ -9,7 +9,7 @@ pipeline{
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
                         namePath:"TestCollOne/new/key",
-                        collectionName:"TestCollTwo"
+                        collectionName:"TestCollTwo",
                         target:"collection",
                         autoCommit:true,
                         autoValidate:true,
