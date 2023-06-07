@@ -15,8 +15,7 @@ pipeline{
                         dataFormat:"json",
                         exporterName:"returnAllData-now",
                         exporterFormat:"json",
-                        fileName:"",
-                        exporterArgs:"{}"
+                        fileName:""
                       )
                 }
             }
