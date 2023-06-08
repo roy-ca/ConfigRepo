@@ -14,9 +14,7 @@ pipeline{
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
-                        exporterName:"returnAllData-now",
-                        exporterFormat:"json",
-                        fileName:""
+                        autoPublish:true
                       )
                 }
             }
