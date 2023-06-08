@@ -2,6 +2,12 @@ def changeset = ''
 pipeline{
     agent any
     stages {
+        stage('Pre'){
+            steps {
+                echo 'Pre exist'
+                sleep 3
+            }
+        }
         stage('Upload'){
             steps{
                 script{
