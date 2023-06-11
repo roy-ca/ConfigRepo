@@ -19,7 +19,8 @@ pipeline{
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
-                        autoPublish:true
+                        autoPublish:true,
+                        outputFormat:"xml"
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
