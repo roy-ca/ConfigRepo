@@ -14,12 +14,12 @@ pipeline{
                     snapshotObj=snDevOpsConfigPipeline(
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
-                        namePath:"TestCollOne/new/key",
+                        namePath:"TestCompOne/new/key",
                         target:"component",
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
-                        autoPublish:false
+                        autoPublish:true
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
