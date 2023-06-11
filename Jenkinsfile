@@ -28,9 +28,10 @@ pipeline{
         }
     }
     post{
-     always{
-         echo ">>>>>Displaying Test results"
-          junit '**/*.xml'
-     }
+        always{
+            echo ">>>>>Displaying Test results"
+            junit '**/*.xml'
+        }
+    }
 }
         
