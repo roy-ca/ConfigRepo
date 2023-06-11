@@ -19,7 +19,7 @@ pipeline{
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
-                        autoPublish:true,
+                        autoPublish:false,
                         outputFormat:"xml",
                         markFailed:false
                       )
