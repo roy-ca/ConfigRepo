@@ -1,4 +1,4 @@
-def changeset = ''
+def snapshotObj = ''
 pipeline{
     agent any
     stages {
@@ -11,27 +11,21 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset=snDevOpsConfigPipeline(
+                    snapshotObj=snDevOpsConfigPipeline(
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
                         namePath:"TestCollOne/new/key",
-                        deployableName:"Test",
-                        target:"deployable",
+                        target:"component",
                         autoCommit:true,
                         autoValidate:true,
                         dataFormat:"json",
                         autoPublish:false
                       )
+                    echo "Final Obj"
+                    echo "${snapshotObj}"
                 }
             }
         }
-        stage('Register') {
-             steps{
-                 script {
-                      snDevOpsConfigRegisterPipeline(changesetNumber:"${changeset}",applicationName:"AdoPublish Test")
-                 }
-             }
-        }          
     }
 }
         
