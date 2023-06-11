@@ -21,7 +21,7 @@ pipeline{
                         dataFormat:"json",
                         autoPublish:true,
                         outputFormat:"xml",
-                        markFailed:false
+                        markFailed:true
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
