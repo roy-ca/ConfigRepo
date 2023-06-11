@@ -31,7 +31,7 @@ pipeline{
     post{
         always{
             echo ">>>>>Displaying Test results"
-            junit '**/*.xml'
+            junit '**/*_${BUILD_NUMBER}.xml'
         }
     }
 }
