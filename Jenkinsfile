@@ -15,7 +15,7 @@ pipeline{
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
-                        target:"component",
+                        target:"component1",
                         dataFormat:"json",
                         autoPublish:true,
                         outputFormat:"xml",
