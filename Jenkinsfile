@@ -15,11 +15,11 @@ pipeline{
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
-                        target:"component1",
+                        target:"component",
                         dataFormat:"json",
                         autoPublish:true,
                         outputFormat:"xml",
-                        markFailed:true
+                        markFailed:false
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
