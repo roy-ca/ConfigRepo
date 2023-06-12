@@ -17,7 +17,6 @@ pipeline{
                         namePath:"TestCompOne/new/key",
                         target:"component",
                         dataFormat:"json",
-                        autoPublish:true,
                         outputFormat:"xml",
                         markFailed:false
                       )
