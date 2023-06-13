@@ -12,7 +12,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset = snDevOpsConfigUpload(applicationName:"AdoPublish Test",configFile:"config*.json",namePath:"TestCompOne/new/key",target:"component",dataFormat:"ini",autoCommit:false,autoValidate:false,autoPublish:false)
+                    changeset = snDevOpsConfigUpload(applicationName:"AdoPublish Test",configFile:"configIni.ini",namePath:"TestCompOne/new/key",target:"component",dataFormat:"ini",autoCommit:false,autoValidate:false,autoPublish:false)
                     snDevOpsConfigUpload(applicationName:"AdoPublish Test",changesetNumber:"${changeset}",configFile:"config*.json",namePath:"TestCompOne/new/key",target:"component",dataFormat:"xml",autoCommit:false,autoValidate:false,autoPublish:false)
                     snapshotObj=snDevOpsConfig(
                         applicationName:"AdoPublish Test",
