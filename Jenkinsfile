@@ -13,7 +13,7 @@ pipeline{
                 script{
                     snapshotObj=snDevOpsConfig(
                         applicationName:"AdoPublish Test",
-                        configFile:"*.json",
+                        configFile:"config*.json",
                         namePath:"TestCompOne/new/key",
                         target:"component",
                         dataFormat:"json",
