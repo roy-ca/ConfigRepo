@@ -18,7 +18,7 @@ pipeline{
                         target:"component",
                         dataFormat:"json",
                         outputFormat:"xml",
-                        markFailed:false
+                        markFailed:true
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
