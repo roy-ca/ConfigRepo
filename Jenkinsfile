@@ -11,7 +11,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    snapshotObj=snDevOpsConfigPipeline(
+                    snapshotObj=snDevOpsConfig(
                         applicationName:"AdoPublish Test",
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
@@ -19,7 +19,7 @@ pipeline{
                         dataFormat:"json",
                         outputFormat:"xml",
                         markFailed:false,
-                        autoPublish:false
+                        whenToPublish:"now"
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
