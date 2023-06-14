@@ -19,7 +19,7 @@ pipeline{
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
                         target:"component",
-                        dataFormat:"json,
+                        dataFormat:"json",
                         markFailed:false,
                         autoCommit:"true",
                         autoValidate:"true",
