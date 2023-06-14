@@ -24,7 +24,7 @@ pipeline{
                         autoPublish:"true",
                         autoValidate:"true",
                         autoCommit:"true",
-                        markFailed:"false"
+                        markFailed:false
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
