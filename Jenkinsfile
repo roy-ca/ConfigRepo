@@ -19,9 +19,11 @@ pipeline{
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
                         target:"component",
-                        dataFormat:"json",
-                        testResultFormat:"xml",
-                        markFailed:false
+                        dataFormat:"json,
+                        markFailed:false,
+                        autoCommit:"true",
+                        autoValidate:"true",
+                        autoCommit:"true"
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
