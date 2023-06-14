@@ -31,11 +31,11 @@ pipeline{
             }
         }
     }
-    post{
-        always{
-            echo ">>>>>Displaying Test results"
-            junit '**/*_${BUILD_NUMBER}.xml'
-        }
-    }
+    //post{
+      //  always{
+        //    echo ">>>>>Displaying Test results"
+          //  junit '**/*_${BUILD_NUMBER}.xml'
+        //}
+    //}
 }
         
