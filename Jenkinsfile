@@ -23,7 +23,7 @@ pipeline{
                         markFailed:false,
                         autoPublish:"false",
                         autoValidate:"true",
-                        autoCommit:"true"
+                        autoCommit:"false"
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
