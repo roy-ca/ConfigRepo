@@ -20,7 +20,7 @@ pipeline{
                         namePath:"TestCompOne/new/key",
                         target:"component",
                         dataFormat:"json",
-                        outputFormat:"xml",
+                        testResultFormat:"xml",
                         markFailed:false
                       )
                     echo "Final Obj"
