@@ -21,8 +21,8 @@ pipeline{
                         target:"component",
                         dataFormat:"json",
                         markFailed:false,
-                        autoPublish:"true",
-                        autoValidate:"false",
+                        autoPublish:"false",
+                        autoValidate:"true",
                         autoCommit:"true"
                       )
                     echo "Final Obj"
