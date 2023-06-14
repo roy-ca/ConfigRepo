@@ -21,9 +21,10 @@ pipeline{
                         target:"component",
                         dataFormat:"json",
                         markFailed:false,
-                        autoPublish:"false",
+                        autoPublish:"true",
                         autoValidate:"true",
-                        autoCommit:"false"
+                        autoCommit:"true",
+                        markFailed:"false"
                       )
                     echo "Final Obj"
                     echo "${snapshotObj}"
