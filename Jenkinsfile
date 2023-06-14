@@ -16,7 +16,6 @@ pipeline{
                     //snDevOpsConfigUpload(applicationName:"AdoPublish Test",changesetNumber:"${changeset}",configFile:"configXml.xml",namePath:"TestCompOne/new/key",target:"component",dataFormat:"xml",autoCommit:false,autoValidate:false,autoPublish:false)
                     snapshotObj=snDevOpsConfig(
                         applicationName:"AdoPublish Test",
-                        changesetNumber:"${changeset}",
                         configFile:"configOne.json",
                         namePath:"TestCompOne/new/key",
                         target:"component",
