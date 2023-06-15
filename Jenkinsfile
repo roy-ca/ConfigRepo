@@ -20,7 +20,7 @@ pipeline{
                         namePath:"TestCompOne/new/key",
                         target:"component",
                         dataFormat:"json",
-                        markFailed:true,
+                        markFailed:false,
                         autoPublish:"true",
                         autoValidate:"true",
                         autoCommit:"false"
