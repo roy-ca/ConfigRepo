@@ -22,7 +22,7 @@ pipeline{
                         dataFormat:"json",
                         markFailed:true,
                         autoPublish:"true",
-                        autoValidate:"true",
+                        autoValidate:"false",
                         autoCommit:"true"
                       )
                     echo "Final Obj"
