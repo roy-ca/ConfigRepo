@@ -21,7 +21,7 @@ pipeline{
                         target:"component",
                         dataFormat:"json",
                         markFailed:true,
-                        autoPublish:"true",
+                        autoPublish:"false",
                         autoValidate:"false",
                         autoCommit:"true"
                       )
