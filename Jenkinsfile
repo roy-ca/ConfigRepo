@@ -12,22 +12,13 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    //changeset = snDevOpsConfigUpload(applicationName:"AdoPublish Test",configFile:"configIni.ini",namePath:"TestCompOne/new/key",target:"component",dataFormat:"ini",autoCommit:false,autoValidate:false,autoPublish:false)
-                    //snDevOpsConfigUpload(applicationName:"AdoPublish Test",changesetNumber:"${changeset}",configFile:"configXml.xml",namePath:"TestCompOne/new/key",target:"component",dataFormat:"xml",autoCommit:false,autoValidate:false,autoPublish:false)
-                    snapshotObj=snDevOpsConfig(
-                        applicationName:"AdoPublish Test",
-                        configFile:"configOne.json",
-                        namePath:"TestCompOne/new/key",
-                        target:"component",
-                        dataFormat:"json",
-                        markFailed:true,
-                        autoPublish:"true",
-                        autoValidate:"true",
-                        autoCommit:"true"
-                      )
-                    echo "Final Obj"
-                    echo "${snapshotObj}"
+                    changeset = snDevOpsConfigUpload(applicationName:"TrialApp",configFile:"config.json",namePath:"TestCompOne/new/key",target:"deployable",dataFormat:"json",autoCommit:true,autoValidate:true,autoPublish:true)
                 }
+            }
+        }
+        stage('Register') {
+            steps{
+                snDevOpsRegisterPipeline(applicationName:"TrialApp",changesetNumber:"${changeset}")
             }
         }
     }
