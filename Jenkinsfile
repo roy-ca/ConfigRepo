@@ -18,7 +18,7 @@ pipeline{
         }
         stage('Register') {
             steps{
-                snDevOpsRegisterPipeline(applicationName:"TrialApp",changesetNumber:"${changeset}")
+                snDevOpsConfigRegisterPipeline(applicationName:"TrialApp",changesetNumber:"${changeset}")
             }
         }
     }
