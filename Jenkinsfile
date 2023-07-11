@@ -18,7 +18,7 @@ pipeline{
         }
         stage('export') {
             steps{
-                snDevOpsConfigExport(applicationName:"TrialApp",deployableName:"Development_1",exporterName:"returnAllData-now",exporterFormat:"json",showResults:true)
+                snDevOpsConfigExport(applicationName:"TrialApp",deployableName:"Development_1",exporterName:"returnAllData-now",exporterFormat:"json",showResults:true,fileName:"")
             }
         }
     }
