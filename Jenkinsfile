@@ -12,7 +12,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset = snDevOpsConfigUpload(applicationName:"TrialApp",configFile:"Config",namePath:"TestCompOne/new/key",target:"deployable",deployableName:"Development_1",dataFormat:"",autoCommit:true,autoValidate:true,autoPublish:true)
+                    changeset = snDevOpsConfigUpload(applicationName:"TrialApp",configFile:"Config/*.json",namePath:"TestCompOne/new/key",target:"deployable",deployableName:"Development_1",dataFormat:"json",autoCommit:true,autoValidate:true,autoPublish:true)
                 }
             }
         }
