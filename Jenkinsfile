@@ -16,9 +16,9 @@ pipeline{
                 }
             }
         }
-        stage('Register') {
+        stage('export') {
             steps{
-                snDevOpsChange(applicationName:"TrialApp",snapshotName:"Development_1-v6.dpl")
+                snDevOpsConfigExport(applicationName:"TrialApp",deployableName:"Development_1",exporterName:"returnAllData-now",exporterFormat:"json",showResults:true)
             }
         }
     }
