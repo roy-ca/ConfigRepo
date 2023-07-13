@@ -2,6 +2,11 @@ def changeset = ''
 pipeline{
     agent any
     stages {
+        stage('Register'){
+            steps{
+                sleep 3
+            }
+        }
         stage('Upload'){
             steps{
                 script{
