@@ -1,32 +1,15 @@
-def snapshotObj = ''
 def changeset = ''
 pipeline{
     agent any
     stages {
-        stage('Pre'){
-            steps {
-                echo 'Pre exist'
-                sleep 3
-            }
-        }
         stage('Upload'){
             steps{
                 script{
                     changeset = snDevOpsConfigUpload(applicationName:"TrialApp",configFile:"Config",namePath:"TestCompOne/new/multiFile",target:"deployable",deployableName:"Development_1",dataFormat:"",autoCommit:true,autoValidate:true,autoPublish:true)
                 }
-            }
-        }
-        stage('export') {
-            steps{
-                snDevOpsConfigExport(applicationName:"TrialApp",deployableName:"Development_1",exporterName:"returnAllData-now",exporterFormat:"json",showResults:true,fileName:"")
+                echo "${changeset}"
             }
         }
     }
-    //post{
-      //  always{
-        //    echo ">>>>>Displaying Test results"
-          //  junit '**/*_${BUILD_NUMBER}.xml'
-        //}
-    //}
 }
         
