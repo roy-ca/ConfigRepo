@@ -5,7 +5,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset = snDevOpsConfigUpload(applicationName:"TrialApp",configFile:"Config",namePath:"TestCompOne/new/multiFile",target:"deployable",deployableName:"Development_1",autoCommit:true,autoValidate:true,autoPublish:true)
+                    changeset = snDevOpsConfig(applicationName:"TrialApp",configFile:"Config",namePath:"TestCompOne/new/multiFile",target:"deployable",deployableName:"Development_1",autoCommit:"true",autoValidate:"true",autoPublish:"true")
                 }
                 echo "${changeset}"
             }
