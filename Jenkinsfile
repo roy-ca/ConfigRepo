@@ -10,7 +10,7 @@ pipeline{
         stage('Upload'){
             steps{
                 script{
-                    changeset = snDevOpsConfigGetSnapshots(applicationName:"TrialApp",deployableName:"Development_1",changesetNumber:"Chset-31",isValidated:false,continueWithLatest:false)
+                    changeset = snDevOpsConfig(applicationName:"TrialApp",deployableName:"Development_1",isValidated:false,continueWithLatest:false,target:"deployable",namePath:"test/NoIMpact",configFile:"config.json",dataFormat:"json")
                 }
                 echo "${changeset}"
             }
