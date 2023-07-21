@@ -11,7 +11,7 @@ pipeline{
             steps{
                 script{
                     //changeset = snDevOpsConfig(applicationName:"TrialApp",deployableName:"Development_1",isValidated:true,continueWithLatest:true,target:"deployable",namePath:"test/NoIMpact",configFile:"config.json",dataFormat:"json")
-                    snDevOpsGetSnapshots(applicationName:"TrialApp",deployableName:"Development_1",changesetNumber: null)
+                    snDevOpsConfigGetSnapshots(applicationName:"TrialApp",deployableName:"Development_1",changesetNumber: null)
                 }
                 echo "${changeset}"
             }
